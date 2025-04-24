@@ -1,6 +1,6 @@
 <x-default-layout title="Major" section_title="Add New Major">
     <div class="grid grid-cols-1">
-        <form action="{{ route('majors.store') }}" 
+        <form action="{{ route('majors.store') }}" method="POST"
             class="flex flex-col gap-4 px-6 py-4 bg-white border border-zinc-100 shadow col-span-3 md:col-span-2">
             @csrf
             @method('POST')
