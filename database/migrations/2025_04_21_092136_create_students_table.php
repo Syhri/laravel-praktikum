@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('phone_number');
             $table->date('birth_date');
             $table->enum('gender', ['Male', 'Female']);
-            $table->enum('status', ['Active', 'Inactive', 'Graduated', 'Dropped Out']);
+            $table->enum('status', ['Active', 'Inactive', 'Alumni', 'Dropped Out']);
             $table->foreignId('major_id')->constrained(
                 'majors',
                 'id',

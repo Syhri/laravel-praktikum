@@ -1,6 +1,7 @@
 @props(['title', 'section_title' => 'Menu'])
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
 </head>
+
 <body class="bg-zinc-100">
     <main>
         <header x-class="{ open: false }"
@@ -43,7 +45,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('students.index') }}"
+                        <a href="{{ route('profile.index') }}"
                             class="{{ request()->is('majors') ? 'text-black' : 'text-zinc-500' }}
                        block px-2 py-1 rounded font-semibold hover:text-black text-sm">
                             Profile
@@ -75,5 +77,5 @@
         </section>
     </main>
 </body>
-</html>
 
+</html>

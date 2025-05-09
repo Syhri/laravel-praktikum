@@ -5,13 +5,23 @@
         </div>
     @endif
 
-    <div class="flex my-4">
+    @can('store-student')
+        <div class="flex">
+            <a href="{{ route('students.create') }}"
+                class="bg-green-50 text-green-500 border border-green-500 px-3 py-2 flex items-center gap-2">
+                <i class="ph ph-plus block text-green-500"></i>
+                <div>Add Students</div>
+            </a>
+        </div>
+    @endcan
+
+    {{-- <div class="flex my-4">
         <a href="{{ route('students.create') }}"
             class="bg-green-50 text-green-500 border border-green-500 px-3 py-2 flex items-center gap-2">
             <i class="ph ph-plus block text-green-500"></i>
             <span>Add Student</span>
         </a>
-    </div>
+    </div> --}}
 
     <div class="overflow-x-auto">
         <table class="min-w-full bg-white shadow">
@@ -33,7 +43,7 @@
                         <td class="py-3 px-6 text-left">{{ $student->name }}</td>
                         <td class="py-3 px-6 text-center">{{ $student->student_id_number }}</td>
                         <td class="py-3 px-6 text-center">{{ $student->gender }}</td>
-                        <td class="py-3 px-6 text-center">{{ $student->majors }}</td>
+                        <td class="py-3 px-6 text-center">{{ $student->majors->name ?? '-' }}</td>
                         <td class="py-3 px-6 text-center">{{ $student->status }}</td>
                         <td class="py-3 px-6 flex justify-center gap-1">
                             <a href="{{ route('students.show', $student->id) }}"
