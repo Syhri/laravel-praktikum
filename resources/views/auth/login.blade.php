@@ -1,5 +1,4 @@
 <x-auth-layout title="Login" section_title="Welcome Back" section_description="Login with your account">
-    <div class="min-h-screen flex items-center justify-center">
         <div class="w-full max-w-md bg-white p-6 rounded shadow">
             @if (session('success'))
                 <div class="bg-green-50 border border-green-500 text-green-500 px-3 py-2">
@@ -33,5 +32,4 @@
                 </p>
             </form>
         </div>
-    </div>
 </x-auth-layout>
